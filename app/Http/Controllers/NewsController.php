@@ -87,9 +87,11 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function edit(News $news)
+    public function edit($id ,News $news)
     {
         //
+        $data = News::find($id);
+        return Inertia::render('Home', ['news' => $data, 'edit' => 'true']);
     }
 
     /**

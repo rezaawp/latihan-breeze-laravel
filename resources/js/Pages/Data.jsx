@@ -9,7 +9,7 @@ const Data = ({news}) => {
             <td>{data.description}</td>
             <td>{data.author}</td>
             <td><Link href={`delete/${data.id}`} className="btn btn-error">Hapus</Link>
-            <Link href="" className="btn btn-warning mx-2">Get Data</Link></td>
+            <Link href={`get-data/${data.id}`} className="btn btn-warning mx-2">Get Data</Link></td>
         </tr>
     )
 }

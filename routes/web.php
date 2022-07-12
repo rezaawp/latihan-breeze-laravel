@@ -29,6 +29,7 @@ Route::controller(NewsController::class)->group(function(){
     Route::post('/user', 'store')->name('insert');
     Route::get('/about', 'about')->name('about');
     Route::get('/delete/{id}', 'destroy');
+    Route::get('/get-data/{id}', 'edit');
 });
 
 Route::get('/dashboard', function () {

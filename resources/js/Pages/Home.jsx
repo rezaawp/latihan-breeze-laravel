@@ -5,7 +5,7 @@ import { Inertia } from "@inertiajs/inertia";
 
 const Home = (props) => {
     console.log(props)
-    
+    const edit = props.edit;
     const [values, setValues] = useState({
         title: "",
         description: "",
@@ -32,15 +32,14 @@ const Home = (props) => {
       return (
         <div>
           <table>
-
-          <label htmlFor="title">Title : </label>
-          <input className="input input-bordered input-info w-full max-w-xs mb-2" id="title" value={values.title} onChange={handleChange} /> <br />
-          <label htmlFor="description">Desc : </label>
-          <input className="input input-bordered input-info w-full max-w-xs mb-2" id="description" value={values.description} onChange={handleChange} /> <br />
-          <label htmlFor="author">Author : </label>
-          <input className="input input-bordered input-info w-full max-w-xs mb-2" id="author" value={values.author} onChange={handleChange} /> <br /> <br />
-          <button className = "btn btn-success" type="submit" onClick={handleSubmit}>Submit</button>
-          <button className="btn btn-warning mx-2">Update</button>
+            <label htmlFor="title">Title : </label>
+            <input className="input input-bordered input-info w-full max-w-xs mb-2" id="title" value={values.title} onChange={handleChange} /> <br />
+            <label htmlFor="description">Desc : </label>
+            <input className="input input-bordered input-info w-full max-w-xs mb-2" id="description" value={values.description} onChange={handleChange} /> <br />
+            <label htmlFor="author">Author : </label>
+            <input className="input input-bordered input-info w-full max-w-xs mb-2" id="author" value={values.author} onChange={handleChange} /> <br /> <br />
+            <button className = "btn btn-success" type="submit" onClick={handleSubmit}>Submit</button>
+            <button className="btn btn-warning mx-2">Update</button>
           </table>
         </div>
       )
